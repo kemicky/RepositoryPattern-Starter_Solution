@@ -40,6 +40,10 @@ import java.io.IOException
  * @param application The application that this view-model is attached to, it's safe to hold a
  * reference to applications across rotation since Application is never recreated during activity
  * or fragment lifecycle events.
+ *
+ * Author: Kemmy MO Jones.
+ * Date: Nov 20th, 2022.
+ * Topic: Data Persistence (PathWay 2 - Use Room For Data Persistence => Repository Pattern).
  */
 class DevByteViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -127,7 +131,8 @@ class DevByteViewModel(application: Application) : AndroidViewModel(application)
      */
     fun onNetworkErrorShown() {
         _isNetworkErrorShown.value = true
-    }
+
+    } //end: onNetworkErrorShown
 
     /**
      * Factory for constructing DevByteViewModel with parameter
@@ -140,5 +145,5 @@ class DevByteViewModel(application: Application) : AndroidViewModel(application)
             }
             throw IllegalArgumentException("Unable to construct view-model")
         }
-    }
-}
+    } //end: Factory
+} //end: DevByteViewModel class
